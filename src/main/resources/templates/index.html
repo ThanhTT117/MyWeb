@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8">
+      <title>Convsese Store</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+   </head>
+   <body>
+      <th:block th:include="/_header"></th:block>
+      <th:block th:include="/_menu"></th:block>
+      
+      <div class="page-title">Convsese Store</div>
+      <div style="width: 100%;">
+         <h3></h3>
+         <ul>
+            <img style="width: 850px; height: 100%;"  th:src="@{https://converse.com.vn/pictures/catalog/news/promotion/2019girdsale.jpg}" />
+         </ul>
+      </div>
+      
+      <th:block th:include="/_footer"></th:block>
+      
+   </body>
+</html>

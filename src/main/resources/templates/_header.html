@@ -1,0 +1,20 @@
+<div class="header-container" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+	<div class="site-name">Converse Shoes</div>
+
+	<div class="header-bar">
+		<th:block sec:authorize="isAuthenticated()">
+      Hi!
+      <a th:href="@{/admin/accountInfo}" style="text-decoration: none; color: blue;"
+				th:utext="${#request.userPrincipal.name}">..</a>
+         &nbsp;|&nbsp;
+      <a th:href="@{/admin/logout}">Logout</a>
+		</th:block>
+
+		<th:block sec:authorize="!isAuthenticated()">
+     <a th:href="@{/admin/login}">Login</a>
+   </th:block>
+	</div>
+
+</div>
